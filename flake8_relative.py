@@ -2,9 +2,9 @@
 import ast
 
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
-R100 = 'R100: Found relative import'
+R100 = 'R100: Relative import of {name}'
 
 
 class RelativeImportFinder(ast.NodeVisitor):
@@ -30,4 +30,5 @@ class RelativeImportChecker:
         visitor.visit(self.tree)
 
         for import_node in visitor.relative_imports:
-            yield (import_node.lineno, import_node.col_offset, R100, type(self))
+            for alias in import_node.names:
+                yield (import_node.lineno, import_node.col_offset, R100.format(alias.name), type(self))

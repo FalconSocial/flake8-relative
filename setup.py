@@ -16,7 +16,7 @@ setup(
     keywords='flake8 relative import',
     install_requires=['flake8>=3.0.0'],
     author='Tue Haulund',
-    maintainer_email='tue.haulund@gmail.com',
+    author_email='tue.haulund@gmail.com',
     url='https://github.com/TueHaulund/flake8-relative',
     license='MIT License',
     py_modules=['flake8_relative'],
