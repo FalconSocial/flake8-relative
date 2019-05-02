@@ -1,6 +1,9 @@
 """Flake8 plugin checking for relative imports."""
 import ast
 
+
+__version__ = '0.0.1'
+
 R100 = 'R100: Found relative import'
 
 
@@ -17,6 +20,7 @@ class RelativeImportFinder(ast.NodeVisitor):
 
 class RelativeImportChecker:
     name = 'flake8-relative'
+    version = __version__
 
     def __init__(self, tree):
         self.tree = tree
