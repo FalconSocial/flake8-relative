@@ -2,9 +2,9 @@
 import ast
 
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
-R100 = 'R100: Relative import of {name}'
+R100 = 'R100: Relative import of {}'
 
 
 class RelativeImportFinder(ast.NodeVisitor):
